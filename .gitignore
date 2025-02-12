@@ -1,13 +1,16 @@
+docker-compose.override.yml
 secondbrain/
 .env
+env.sh
 .streamlit/secrets.toml
 **/*.pyc
 toto.txt
-*.ipynb
 log.txt
 
-
-
+backend/venv
+backend/.env
+backend/*.deb
+backend/.python-version
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
@@ -15,6 +18,8 @@ log.txt
 **/node_modules
 **/.pnp
 .pnp.js
+
+Pipfile
 
 # testing
 **/coverage
@@ -48,9 +53,54 @@ quivr/*
 streamlit-demo/.streamlit/secrets.toml
 .backend_env
 .frontend_env
-backend/pandoc-*
+backend/core/pandoc-*
 **/.pandoc-*
-backend/application_default_credentials.json
+backend/core/application_default_credentials.json
 
 #local models
-backend/local_models/*
+backend/core/local_models/*
+
+## scripts
+package-lock.json
+celerybeat-schedule
+frontend/public/robots.txt
+frontend/public/sitemap*
+
+pyfiles/*
+backend/bin/*
+backend/lib/*
+backend/pyvenv.cfg
+backend/share/*
+backend/slim.report.json
+volumes/db/data/
+volumes/storage/stub/stub/quivr/*
+supabase/migrations/20240103191539_private.sql
+supabase/20240103191539_private.sql
+paulgraham.py
+.env_test
+supabase/seed-airwallex.sql
+airwallexpayouts.py
+**/application.log*
+backend/celerybeat-schedule.db
+
+backend/application.log.*
+backend/score.json
+backend/modules/assistant/ito/utils/simple.pdf
+backend/modules/sync/controller/credentials.json
+backend/.env.test
+
+**/*.egg-info
+
+.coverage
+backend/core/examples/chatbot/.files/*
+backend/core/examples/chatbot/.python-version
+backend/core/examples/chatbot/.chainlit/config.toml
+backend/core/examples/chatbot/.chainlit/translations/en-US.json
+
+*.log
+
+# Tox
+.tox
+Pipfile
+*.pkl
+backend/docs/site/*
